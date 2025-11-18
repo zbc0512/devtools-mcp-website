@@ -4,6 +4,10 @@ on:
   push:
     branches: [ main ]
 
+# Explicitly give the workflow permission to write repository contents
+permissions:
+  contents: write
+
 jobs:
   deploy:
     name: Deploy to gh-pages
@@ -20,3 +24,5 @@ jobs:
           # The folder the action should deploy.
           folder: .
           clean: true
+          # Pass the token explicitly to ensure the action can push
+          github_token: ${{ secrets.GITHUB_TOKEN }}
