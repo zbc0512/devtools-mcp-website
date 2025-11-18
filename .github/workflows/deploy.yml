@@ -25,4 +25,4 @@ jobs:
           folder: .
           clean: true
           # Pass the token explicitly to ensure the action can push
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
