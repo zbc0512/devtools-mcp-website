@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title data-i18n="mcp_title">Chrome DevTools MCP — DevFest Workshop</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">DevFest Workshop</a>
+      <nav class="main-nav">
+        <a href="gdg-devfest.html" data-i18n="nav_gdg">GDG & DevFest</a>
+        <a href="devtools-mcp.html" data-i18n="nav_mcp">DevTools MCP</a>
+        <a href="about.html" data-i18n="nav_about">About</a>
+      </nav>
+      <div class="controls">
+        <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+        <select id="lang-select" aria-label="Language">
+          <option value="en">English</option>
+          <option value="zh">中文</option>
+        </select>
+        <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1 data-i18n="mcp_heading">Chrome DevTools MCP Server</h1>
+        <p class="lead" data-i18n="mcp_intro">The Chrome DevTools MCP Server provides a bridge between external agents (including model-driven agents) and the browser's DevTools. It implements the Model Context Protocol (MCP) to expose context, actions, and debugging capabilities to outside tools and services.</p>
+        <p class="meta" data-i18n="mcp_features_title">Key features: protocol server, DevTools APIs for DOM/network/perf, and demo integrations.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="devtools-mcp.html" data-i18n="mcp_install_title">Getting started</a>
+          <a class="btn" href="index.html" data-i18n="nav_gdg">About GDG</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="content container">
+      <section>
+        <h2 data-i18n="mcp_features_title">Key features</h2>
+        <ul>
+          <li data-i18n="mcp_feature_1">Protocol server that enables structured access to DevTools context.</li>
+          <li data-i18n="mcp_feature_2">APIs for inspecting DOM, network, performance, and console logs.</li>
+          <li data-i18n="mcp_feature_3">Examples and demo integrations showing automation workflows and model-powered tooling.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 data-i18n="mcp_install_title">Getting started</h2>
+        <p data-i18n="mcp_install_desc">The project typically provides installation steps, example servers, and demo clients on its GitHub repository: https://github.com/ChromeDevTools/chrome-devtools-mcp/ — consult the README and examples for local setup and usage.</p>
+        <p data-i18n="mcp_contrib">If you'd like to explore the source, review issues, or contribute, the repository includes contribution guidelines and sample code to get started.</p>
+      </section>
+
+      <section class="card">
+        <h3 data-i18n="mcp_security_title">Security & privacy</h3>
+        <p data-i18n="mcp_security_desc">When exposing DevTools to external agents, be mindful of the security implications. MCP server deployments should be run in trusted environments, with authentication and explicit user consent for actions that can inspect or control browsing contexts.</p>
+      </section>
+
+      <section class="card">
+        <h3 data-i18n="mcp_repo_title">Project & resources</h3>
+        <p data-i18n="mcp_repo_desc">The Chrome DevTools MCP project is hosted on GitHub and contains docs, examples, and a tool reference. It provides configuration options (including <code>--isolated</code>, <code>--headless</code>, and <code>--wsEndpoint</code>) and a comprehensive tool list for automations such as click, fill, navigate, and performance tracing.</p>
+        <p><a href="https://github.com/ChromeDevTools/chrome-devtools-mcp/" target="_blank" rel="noopener">GitHub: chrome-devtools-mcp</a></p>
+      </section>
+
+      <section class="card">
+        <h3 data-i18n="mcp_quickstart_title">Quick start (summary)</h3>
+        <ul>
+          <li data-i18n="mcp_quickstart_1">Install via npm: use the package or run with <code>npx chrome-devtools-mcp@latest</code>.</li>
+          <li data-i18n="mcp_quickstart_2">The server will start a Chrome instance; use <code>--isolated</code> to avoid reusing an existing profile.</li>
+          <li data-i18n="mcp_quickstart_3">Use the tool reference to call input/navigation/performance tools from your MCP client.</li>
+        </ul>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year">2025</span> Jabez — <a href="mailto:zbc0512@gmail.com">zbc0512@gmail.com</a></div>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>

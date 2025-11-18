@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title data-i18n="about_title">About — Jabez</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">DevFest Workshop</a>
+      <nav class="main-nav">
+        <a href="gdg-devfest.html" data-i18n="nav_gdg">GDG & DevFest</a>
+        <a href="devtools-mcp.html" data-i18n="nav_mcp">DevTools MCP</a>
+        <a href="about.html" data-i18n="nav_about">About</a>
+      </nav>
+      <div class="controls">
+        <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+        <select id="lang-select" aria-label="Language">
+          <option value="en">English</option>
+          <option value="zh">中文</option>
+        </select>
+        <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1 data-i18n="about_heading">About Jabez</h1>
+        <p class="lead"><strong>Jabez</strong> — <span data-i18n="about_role">Java developer</span>, bass player, and AI enthusiast.</p>
+        <p class="meta">Workshop attendee & hobbyist — Java backend, electric bass, and exploring AI-driven developer tools.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="about.html" data-i18n="about_contact_title">Contact</a>
+          <a class="btn" href="index.html">Back to home</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="content container">
+      <section>
+        <h2 data-i18n="about_bio_title">Bio</h2>
+        <p data-i18n="about_bio">I work primarily in Java, building backend services and tools. In my free time I enjoy playing electric bass and exploring AI-powered developer tools. This workshop at DevFest focuses on the intersection of DevTools and model-driven automation.</p>
+      </section>
+
+      <section>
+        <h2 data-i18n="about_contact_title">Contact</h2>
+        <p data-i18n="about_contact">Email: <a href="mailto:zbc0512@gmail.com">zbc0512@gmail.com</a></p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year">2025</span> Jabez</div>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
