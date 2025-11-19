@@ -287,14 +287,14 @@ h1 {
 }
 
 .gdg-logo {
-    height: 32px;
-    /* Increased from 24px to be more visible */
+    height: 40px;
+    /* Increased to match text height */
     width: auto;
 }
 
 .devfest-text {
     font-size: 28px;
-    /* Increased from 22px */
+    /* Reverted to original size */
     font-weight: 400;
     color: var(--text-color);
     letter-spacing: -0.5px;
