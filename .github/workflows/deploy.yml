@@ -1,62 +1,34 @@
-name: Deploy site to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: ["main"]
+  workflow_dispatch:
 
-# Explicitly give the workflow permission to write repository contents
 permissions:
-  contents: write
+  contents: read
   pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   deploy:
-    name: Deploy to gh-pages
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          # branch the action should deploy to.
-          branch: gh-pages
-          # The folder the action should deploy.
-          folder: .
-          clean: true
-          # Pass the token explicitly to ensure the action can push
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Ensure Pages publishing source is set
-        env:
-          # Optional: provide a Personal Access Token in repository secrets named PAGES_PAT
-          # The PAT should have `repo` scope (or `public_repo` for public repos) so it can modify Pages settings.
-          PAGES_PAT: ${{ secrets.PAGES_PAT }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO: ${{ github.repository }}
-        run: |
-          echo "Setting Pages publishing source to gh-pages via API"
-          api_url="https://api.github.com/repos/${REPO}/pages"
-          body='{"source":{"branch":"gh-pages","path":"/"}}'
-
-          # Prefer a user-provided PAT stored in secrets.PAGES_PAT because GITHUB_TOKEN may be restricted
-          if [ -n "${PAGES_PAT}" ]; then
-            AUTH_HEADER="Authorization: Bearer ${PAGES_PAT}"
-            echo "Using PAGES_PAT from repository secrets to call Pages API"
-          else
-            AUTH_HEADER="Authorization: Bearer ${GITHUB_TOKEN}"
-            echo "PAGES_PAT not found in secrets; falling back to GITHUB_TOKEN (may be blocked)"
-          fi
-
-          status=$(curl -s -o /dev/null -w "%{http_code}" -X PUT -H "Accept: application/vnd.github+json" -H "$AUTH_HEADER" -H "X-GitHub-Api-Version: 2022-11-28" -d "$body" "$api_url")
-          echo "Pages API response status: $status"
-          if [ "$status" -ge 200 ] && [ "$status" -lt 300 ]; then
-            echo "Pages source set successfully"
-          else
-            echo "Failed to set Pages source (status $status). Response:"
-            # print full response to help debugging (do not fail the job to avoid breaking deploy)
-            curl -s -X PUT -H "Accept: application/vnd.github+json" -H "$AUTH_HEADER" -H "X-GitHub-Api-Version: 2022-11-28" -d "$body" "$api_url" || true
-            echo "\nIf you see 'Resource not accessible by integration', create a Personal Access Token (repo scope) and add it to repository secrets as PAGES_PAT. See: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token"
-            exit 0
-          fi
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
