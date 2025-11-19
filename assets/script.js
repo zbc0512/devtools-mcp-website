@@ -252,5 +252,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Scroll Navigation Logic (Hide on down, Show on up)
+  function initScrollNav() {
+    const nav = document.querySelector('nav');
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+          const navLinks = document.querySelector('.nav-links');
+          const isMenuOpen = navLinks.classList.contains('active');
+
+          // Only hide if menu is NOT open
+          if (!isMenuOpen) {
+            if (currentScrollY > lastScrollY && currentScrollY > 50) {
+              // Scrolling down & past top
+              nav.classList.add('nav-hidden');
+            } else {
+              // Scrolling up
+              nav.classList.remove('nav-hidden');
+            }
+          }
+
+          lastScrollY = currentScrollY;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+  }
+
   initMobileMenu();
+  initScrollNav();
 });
