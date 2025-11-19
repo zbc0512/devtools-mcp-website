@@ -181,4 +181,76 @@ document.addEventListener('DOMContentLoaded', () => {
       heroTitle.classList.add('scramble-text');
     }
   }
+
+  // Mobile Menu Logic
+  function initMobileMenu() {
+    const nav = document.querySelector('nav');
+    const navLinks = document.querySelector('.nav-links');
+    const navControls = document.querySelector('.nav-controls');
+
+    // Create Toggle Button
+    const toggleBtn = document.createElement('button');
+    toggleBtn.className = 'menu-toggle';
+    toggleBtn.innerHTML = '☰';
+    toggleBtn.ariaLabel = 'Toggle Menu';
+
+    // Insert before controls (or append to nav, depending on layout preference)
+    // Here we insert it before the controls so it sits to the left of them, or we can just append to nav
+    // Given flex: space-between, we probably want it visible. Let's append to nav but hide on desktop via CSS.
+    // Actually, let's put it inside nav-controls for better alignment or just outside.
+    // Let's place it in the nav, but we need to ensure CSS hides it on desktop.
+    // Wait, CSS for .menu-toggle is only in @media (max-width: 768px), so it's hidden by default (display: block is inside media query).
+    // But we need to make sure it's hidden on desktop.
+    toggleBtn.style.display = 'none'; // Default hidden
+
+    // We need to add a style rule for desktop to hide it, or just rely on the media query.
+    // The CSS I wrote only has .menu-toggle { display: block } inside the media query.
+    // It doesn't define .menu-toggle outside. So it might be visible if I don't set display: none inline or in global CSS.
+    // Let's add a global rule in JS or just rely on the fact that I didn't define it globally? 
+    // Browser default for button is inline-block. So it will show.
+    // I should update CSS to hide it globally first. 
+    // For now, I'll set it to display: none, and let the media query override it? 
+    // Inline styles have high specificity. Media query won't override inline style unless !important.
+    // Better to add a class that handles visibility.
+
+    // Let's just append it and rely on the CSS I just wrote. 
+    // Wait, I missed adding the global "display: none" for .menu-toggle in the CSS step.
+    // I should fix that in CSS or just add it here.
+    // Let's add it to nav-controls for alignment.
+    navControls.prepend(toggleBtn);
+
+    toggleBtn.addEventListener('click', () => {
+      const isActive = navLinks.classList.toggle('active');
+      toggleBtn.innerHTML = isActive ? '✕' : '☰';
+      document.body.style.overflow = isActive ? 'hidden' : '';
+    });
+
+    // Close menu when clicking a link
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        toggleBtn.innerHTML = '☰';
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Handle resize to reset
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        navLinks.classList.remove('active');
+        toggleBtn.innerHTML = '☰';
+        document.body.style.overflow = '';
+        toggleBtn.style.display = 'none';
+      } else {
+        toggleBtn.style.display = 'block';
+      }
+    });
+
+    // Initial check
+    if (window.innerWidth <= 768) {
+      toggleBtn.style.display = 'block';
+    }
+  }
+
+  initMobileMenu();
 });
