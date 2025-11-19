@@ -135,9 +135,12 @@ nav {
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: #45474d;
-    background-color: #f8f9fc;
-    /* Light gray background on hover matching cards */
+    color: #121317;
+    /* Match button text color */
+    background-color: rgba(183, 191, 217, 0.1);
+    /* EXACT from antigravity 'Notify me' button */
+    border: 1px solid rgba(33, 34, 38, 0.06);
+    /* EXACT from antigravity 'Notify me' button */
     text-decoration: none;
 }
 
@@ -150,6 +153,15 @@ body.dark-mode .nav-links a {
 
 body.dark-mode .nav-links a.active {
     color: #e0e0e0;
+}
+
+/* Dark Mode Nav Hover Override */
+body.dark-mode .nav-links a:hover,
+body.dark-mode .nav-links a.active {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.15);
+    /* Subtle white border for dark mode */
+    background-color: transparent;
 }
 
 .nav-controls {
@@ -343,6 +355,12 @@ h1 {
     transform: translateY(-5px);
     /* Keep subtle lift */
     /* No shadow change to match flat aesthetic */
+}
+
+/* Dark Mode Card Override */
+body.dark-mode .card {
+    background: #1e1f24;
+    /* Reasonable dark gray for contrast against #050505 */
 }
 
 /* Spotlight Effect Logic */
