@@ -143,8 +143,8 @@ nav {
 .nav-links a:hover {
     color: #121317;
     /* Match button text color */
-    background-color: rgba(183, 191, 217, 0.25);
-    /* Darker opacity (0.1 -> 0.25) */
+    background-color: rgb(239, 240, 243);
+    /* EXACT from antigravity nav hover */
     text-decoration: none;
 }
 
