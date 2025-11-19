@@ -593,6 +593,25 @@ footer {
     }
 }
 
+/* Code Block Styling */
+.code-block {
+    background: #f1f3f4;
+    /* Light gray for light mode */
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: monospace;
+    color: #333;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode .code-block {
+    background: rgba(255, 255, 255, 0.1);
+    /* Translucent white for dark mode */
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 /* Desktop Nav Scroll Hide (Optional, but user asked for it generally) */
 /* Actually user asked for "https://antigravity.google" behavior which applies to desktop too usually. */
 /* Let's apply .nav-hidden globally but only trigger it via JS */
