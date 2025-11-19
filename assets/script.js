@@ -25,18 +25,33 @@ document.addEventListener('DOMContentLoaded', () => {
         "what_is_devfest": "What is DevFest?",
         "devfest_desc": "DevFest is a global community-led developer conference hosted by Google Developer Groups (GDGs). It is focused on community building and learning about Google's technologies.",
         "values": "Community Values",
-        "values_desc": "We believe in knowledge sharing, inclusivity, and the power of community to drive innovation."
+        "values_desc": "We believe in knowledge sharing, inclusivity, and the power of community to drive innovation.",
+        "programs_title": "Global Programs",
+        "gde_title": "Google Developer Experts",
+        "gde_desc": "A global program to recognize individuals who are experts and thought leaders in one or more Google technologies.",
+        "accelerator_title": "Google for Startups Accelerator",
+        "accelerator_desc": "A program that connects top startups with the best of Google's people, network, and advanced technology.",
+        "wtm_title": "Women Techmakers",
+        "wtm_desc": "Google's program and global community for women in technology, providing visibility, community, and resources."
       },
       "mcp": {
         "title": "Chrome DevTools MCP",
         "overview": "Overview",
         "overview_desc": "Chrome DevTools MCP is a Model Context Protocol server that allows AI agents to interact with Chrome DevTools. It enables agents to inspect, debug, and modify data in the browser.",
+        "installation_title": "Installation",
+        "installation_desc": "Get started quickly by running the server using npx:",
+        "concepts_title": "Core Concepts",
+        "concepts_desc": "Understand how the server manages user profiles and connects to Chrome instances.",
         "features": "Key Features",
         "feature_1": "Performance Insights: Record traces and extract actionable insights.",
         "feature_2": "Browser Debugging: Analyze network requests, screenshots, and console logs.",
         "feature_3": "Reliable Automation: Use Puppeteer to automate actions and wait for results.",
         "tools": "Available Tools",
-        "tools_desc": "The server provides tools for Input Automation (click, type, hover), Navigation (open, close, switch tabs), Emulation (viewport resizing), and Performance Analysis."
+        "tools_desc": "The server provides tools for Input Automation (click, type, hover), Navigation (open, close, switch tabs), Emulation (viewport resizing), and Performance Analysis.",
+        "config_title": "Configuration",
+        "config_desc": "The server supports various configurations, including connecting to an existing Chrome instance via WebSocket or launching a new instance with custom flags and user data directories.",
+        "resources_title": "Resources",
+        "resources_desc": "Explore the official repository for comprehensive documentation, issue tracking, and contribution guidelines to help improve the tool."
       },
       "profile": {
         "title": "About Jabez",
@@ -69,18 +84,33 @@ document.addEventListener('DOMContentLoaded', () => {
         "what_is_devfest": "什么是 DevFest？",
         "devfest_desc": "DevFest 是由 Google 开发者社区 (GDG) 举办的全球性社区主导的开发者大会。它专注于社区建设和学习 Google 的技术。",
         "values": "社区价值观",
-        "values_desc": "我们相信知识分享、包容性以及社区推动创新的力量。"
+        "values_desc": "我们相信知识分享、包容性以及社区推动创新的力量。",
+        "programs_title": "全球项目",
+        "gde_title": "Google 开发者专家 (GDE)",
+        "gde_desc": "一项全球计划，旨在表彰在一种或多种 Google 技术方面具有专长和思想领导力的个人。",
+        "accelerator_title": "Google 初创企业加速器",
+        "accelerator_desc": "该计划将顶尖初创企业与 Google 最优秀的人才、网络和先进技术联系起来。",
+        "wtm_title": "Women Techmakers",
+        "wtm_desc": "Google 面向科技领域女性的计划和全球社区，提供知名度、社区和资源。"
       },
       "mcp": {
         "title": "Chrome DevTools MCP",
         "overview": "概览",
         "overview_desc": "Chrome DevTools MCP 是一个模型上下文协议服务器，允许 AI Agent 与 Chrome DevTools 交互。它使 Agent 能够检查、调试和修改浏览器中的数据。",
+        "installation_title": "安装",
+        "installation_desc": "使用 npx 快速启动服务器：",
+        "concepts_title": "核心概念",
+        "concepts_desc": "了解服务器如何管理用户配置文件以及如何连接到 Chrome 实例。",
         "features": "核心特性",
         "feature_1": "性能洞察：记录追踪并提取可操作的洞察。",
         "feature_2": "浏览器调试：分析网络请求、截图和控制台日志。",
         "feature_3": "可靠自动化：使用 Puppeteer 自动化操作并等待结果。",
         "tools": "可用工具",
-        "tools_desc": "该服务器提供用于输入自动化（点击、输入、悬停）、导航（打开、关闭、切换标签页）、模拟（视口调整）和性能分析的工具。"
+        "tools_desc": "该服务器提供用于输入自动化（点击、输入、悬停）、导航（打开、关闭、切换标签页）、模拟（视口调整）和性能分析的工具。",
+        "config_title": "配置",
+        "config_desc": "该服务器支持多种配置，包括通过 WebSocket 连接到现有的 Chrome 实例，或使用自定义标志和用户数据目录启动新实例。",
+        "resources_title": "资源",
+        "resources_desc": "探索官方仓库以获取全面的文档、问题跟踪和贡献指南，帮助改进该工具。"
       },
       "profile": {
         "title": "关于 Jabez",
