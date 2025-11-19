@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome DevTools MCP - DevFest Workshop</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="nav-brand">DevFest Workshop</a>
+        <ul class="nav-links">
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="gdg.html" data-i18n="nav.gdg">GDG & DevFest</a></li>
+            <li><a href="mcp.html" class="active" data-i18n="nav.mcp">DevTools MCP</a></li>
+            <li><a href="profile.html" data-i18n="nav.profile">Profile</a></li>
+        </ul>
+        <div class="nav-controls">
+            <button id="lang-toggle" class="btn-icon">中文</button>
+            <button id="theme-toggle" class="btn-icon">☀️</button>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <h1 data-i18n="mcp.title">Chrome DevTools MCP</h1>
+        </section>
+
+        <section class="grid">
+            <div class="card">
+                <h3 data-i18n="mcp.overview">Overview</h3>
+                <p data-i18n="mcp.overview_desc">Chrome DevTools MCP is a Model Context Protocol server that allows AI
+                    agents to interact with Chrome DevTools. It enables agents to inspect, debug, and modify data in the
+                    browser.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 data-i18n="mcp.features" style="margin-bottom: 1rem;">Key Features</h2>
+            <div class="grid">
+                <div class="card">
+                    <p data-i18n="mcp.feature_1">Performance Insights: Record traces and extract actionable insights.
+                    </p>
+                </div>
+                <div class="card">
+                    <p data-i18n="mcp.feature_2">Browser Debugging: Analyze network requests, screenshots, and console
+                        logs.</p>
+                </div>
+                <div class="card">
+                    <p data-i18n="mcp.feature_3">Reliable Automation: Use Puppeteer to automate actions and wait for
+                        results.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid">
+            <div class="card">
+                <h3 data-i18n="mcp.tools">Available Tools</h3>
+                <p data-i18n="mcp.tools_desc">The server provides tools for Input Automation (click, type, hover),
+                    Navigation (open, close, switch tabs), Emulation (viewport resizing), and Performance Analysis.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Jabez. Built for DevFest.</p>
+    </footer>
+
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
