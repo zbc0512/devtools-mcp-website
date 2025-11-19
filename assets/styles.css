@@ -18,8 +18,10 @@
     /* Nav */
     --nav-bg: transparent;
     --nav-border: transparent;
-    --nav-bg-mobile: rgba(5, 5, 5, 1);
-    /* Dark mobile menu */
+    --nav-bg: transparent;
+    --nav-border: transparent;
+    --nav-bg-mobile: #ffffff;
+    /* White mobile menu for light mode */
 
     /* Spacing */
     --spacing-xs: 0.5rem;
@@ -498,13 +500,28 @@ footer {
     }
 
     /* Typography & Layout */
+    .hero {
+        min-height: 100vh;
+        /* Ensure full viewport height */
+        padding: 0 1.5rem;
+        /* Add horizontal padding for mobile */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* Vertically center */
+        align-items: center;
+        /* Horizontally center */
+    }
+
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 48px;
+        /* Smaller font for mobile */
         padding: 0 1rem;
     }
 
     .hero p {
-        font-size: 1.1rem;
+        font-size: 32px;
+        /* Smaller subtitle for mobile */
         padding: 0 1rem;
     }
 
