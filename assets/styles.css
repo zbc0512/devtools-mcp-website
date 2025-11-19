@@ -215,7 +215,8 @@ main {
 
 section {
     margin-bottom: var(--spacing-lg);
-    padding-top: 100px;
+    padding-top: 80px;
+    /* Reduced from 100px to tighten spacing */
     /* Space for nav on non-hero pages */
     opacity: 0;
     transform: translateY(30px);
@@ -257,7 +258,8 @@ h1 {
     letter-spacing: normal;
     color: var(--text-color);
     /* #121317 */
-    margin-bottom: var(--spacing-md);
+    margin-bottom: 1rem;
+    /* Reduced from var(--spacing-md) (2rem) to tighten spacing */
 }
 
 .hero h1 {
@@ -501,9 +503,11 @@ footer {
 
     /* Typography & Layout */
     .hero {
-        min-height: 100vh;
-        /* Ensure full viewport height */
+        min-height: 100dvh;
+        /* Use dvh for better mobile browser support */
         padding: 0 1.5rem;
+        margin-top: -80px;
+        /* Counteract main padding to ensure true centering */
         /* Add horizontal padding for mobile */
         display: flex;
         flex-direction: column;
@@ -526,7 +530,8 @@ footer {
     }
 
     main {
-        padding-top: 100px;
+        padding-top: 80px;
+        /* Match section padding */
         padding-left: var(--spacing-sm);
         padding-right: var(--spacing-sm);
     }
