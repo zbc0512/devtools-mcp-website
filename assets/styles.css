@@ -105,6 +105,8 @@ nav {
     color: var(--text-color);
     text-decoration: none;
     letter-spacing: -0.5px;
+    white-space: nowrap;
+    /* Prevent wrapping of brand text */
 }
 
 .nav-logo {
