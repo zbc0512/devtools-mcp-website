@@ -542,6 +542,8 @@ footer {
 
     .grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
+        /* Reduced gap for mobile */
     }
 
     .card {
