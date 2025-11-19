@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Handle resize to reset
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 768) {
+      if (window.innerWidth > 1024) {
         navLinks.classList.remove('active');
         toggleBtn.innerHTML = '☰';
         document.body.style.overflow = '';
@@ -277,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Initial check
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 1024) {
       toggleBtn.style.display = 'block';
     }
   }

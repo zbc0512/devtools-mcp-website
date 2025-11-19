@@ -153,7 +153,10 @@ nav {
     text-decoration: none;
 }
 
-
+/* Hamburger Menu Toggle (Hidden by default) */
+.menu-toggle {
+    display: none;
+}
 
 /* Dark mode nav adjustments */
 body.dark-mode .nav-links a {
@@ -457,7 +460,7 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
     /* Mobile Nav */
     nav {
