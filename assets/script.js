@@ -118,12 +118,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   function applyTheme(theme) {
-    if (theme === 'light') {
-      document.body.classList.add('light-mode');
-      themeToggle.textContent = '🌙';
+    if (theme === 'dark') {
+      document.body.classList.add('dark-mode');
+      themeToggle.textContent = '☀️'; // Sun icon for switching to light
     } else {
-      document.body.classList.remove('light-mode');
-      themeToggle.textContent = '☀️';
+      document.body.classList.remove('dark-mode');
+      themeToggle.textContent = '🌙'; // Moon icon for switching to dark
     }
   }
 

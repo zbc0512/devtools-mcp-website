@@ -1,21 +1,25 @@
 :root {
-    /* Colors - Deep Dark (Antigravity Style) */
-    --bg-color: #050505;
-    --text-color: #e0e0e0;
-    --text-secondary: #888888;
+    /* Colors - EXACT match to antigravity.google */
+    --bg-color: #ffffff;
+    /* Pure white like antigravity */
+    --text-color: #121317;
+    /* Very dark gray from antigravity */
+    --text-secondary: #45474d;
+    /* Nav link gray from antigravity */
     --accent-color: #4285f4;
     --accent-hover: #7aa5f5;
 
     /* Card / Glass */
-    --card-bg: rgba(255, 255, 255, 0.03);
-    --card-border: rgba(255, 255, 255, 0.08);
-    --spotlight-color: rgba(255, 255, 255, 0.1);
+    --card-bg: #f8f9fa;
+    /* Light gray cards on white background */
+    --card-border: rgba(0, 0, 0, 0.12);
+    --spotlight-color: rgba(0, 0, 0, 0.05);
 
     /* Nav */
-    --nav-bg: rgba(20, 20, 20, 0.6);
-    --nav-border: rgba(255, 255, 255, 0.1);
+    --nav-bg: transparent;
+    --nav-border: transparent;
     --nav-bg-mobile: rgba(5, 5, 5, 1);
-    /* Opaque dark bg for mobile menu */
+    /* Dark mobile menu */
 
     /* Spacing */
     --spacing-xs: 0.5rem;
@@ -23,26 +27,28 @@
     --spacing-md: 2rem;
     --spacing-lg: 5rem;
 
-    /* Typography */
+    /* Typography - EXACT match to antigravity */
     --font-family: 'Google Sans', 'Inter', system-ui, sans-serif;
     --font-mono: 'Roboto Mono', monospace;
+    --font-weight-normal: 400;
+    --font-weight-medium: 430;
+    /* Antigravity uses 430 for nav links */
+    --font-weight-semibold: 450;
+    /* Antigravity uses 450 for h1 */
 
     /* Transitions */
     --transition-speed: 0.4s;
 }
 
-/* Light Mode Overrides */
-body.light-mode {
-    --bg-color: #f5f5f7;
-    --text-color: #1d1d1f;
-    --text-secondary: #86868b;
-    --card-bg: rgba(255, 255, 255, 0.6);
-    --card-border: rgba(0, 0, 0, 0.08);
-    --spotlight-color: rgba(0, 0, 0, 0.05);
-    --nav-bg: rgba(255, 255, 255, 0.7);
-    --nav-border: rgba(0, 0, 0, 0.1);
-    --nav-bg-mobile: rgba(255, 255, 255, 1);
-    /* Opaque light bg for mobile menu */
+/* Dark Mode (when toggled) */
+body.dark-mode {
+    --bg-color: #050505;
+    --text-color: #e0e0e0;
+    --text-secondary: #888888;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --spotlight-color: rgba(255, 255, 255, 0.1);
+    --nav-bg-mobile: rgba(5, 5, 5, 1);
 }
 
 * {
@@ -62,75 +68,96 @@ body {
     position: relative;
 }
 
-/* Grid Background Effect */
-/* Grid Background Effect (Dots) */
+/* Grid Background Effect - Disabled */
 body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(var(--card-border) 1px, transparent 1px);
-    background-size: 30px 30px;
-    mask-image: radial-gradient(circle 600px at var(--mouse-x, 50%) var(--mouse-y, 50%), black 20%, transparent 100%);
-    -webkit-mask-image: radial-gradient(circle 600px at var(--mouse-x, 50%) var(--mouse-y, 50%), black 20%, transparent 100%);
-    opacity: 0.4;
-    z-index: -1;
-    pointer-events: none;
+    display: none;
 }
 
-/* Navigation - Minimal Transparent */
+/* Navigation - Clean left-aligned layout */
 nav {
+    display: flex;
+    justify-content: space-between;
+    /* Logo left, links center-left, controls right */
+    align-items: center;
+    gap: 3rem;
+    padding: 1rem 5rem 0.5rem 5rem;
+    /* Increased top padding */
+    height: auto;
+    /* Let content determine height */
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    padding: 1.5rem 3rem;
-    background: transparent;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
+    right: 0;
     z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background: transparent;
+    border: none;
 }
 
 .nav-brand {
-    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Space between logo and text */
+    font-weight: 400;
     font-size: 1.1rem;
     color: var(--text-color);
     text-decoration: none;
     letter-spacing: -0.5px;
 }
 
+.nav-logo {
+    height: 20px;
+    /* EXACT antigravity logo height */
+    width: auto;
+}
+
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
+    /* Comfortable spacing between links */
     list-style: none;
 }
 
 .nav-links a {
     color: var(--text-secondary);
+    /* #45474d */
     text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: color 0.2s;
-    opacity: 0.8;
+    font-size: 14.5px;
+    /* EXACT from antigravity */
+    font-weight: 430;
+    /* EXACT from antigravity */
+    padding: 6px 16px;
+    /* EXACT from antigravity */
+    border-radius: 20px;
+    /* For smooth hover effect */
+    transition: color 0.2s, background-color 0.2s;
 }
 
-.nav-links a:hover,
+.nav-links a:hover {
+    color: var(--text-color);
+    background-color: rgba(0, 0, 0, 0.04);
+    /* Very subtle on hover */
+}
+
 .nav-links a.active {
     color: var(--text-color);
-    opacity: 1;
+    background-color: transparent;
+}
+
+/* Dark mode nav adjustments */
+body.dark-mode .nav-links a {
+    color: #888888;
+}
+
+body.dark-mode .nav-links a.active {
+    color: #e0e0e0;
 }
 
 .nav-controls {
     display: flex;
     gap: 1rem;
+    margin-left: auto;
+    /* Push to right */
 }
 
 .btn-icon {
@@ -151,7 +178,6 @@ nav {
 
 /* Layout */
 main {
-    padding-top: 140px;
     min-height: 80vh;
     max-width: 1000px;
     margin: 0 auto;
@@ -161,6 +187,8 @@ main {
 
 section {
     margin-bottom: var(--spacing-lg);
+    padding-top: 100px;
+    /* Space for nav on non-hero pages */
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
@@ -173,39 +201,107 @@ section {
     }
 }
 
-/* Hero Section */
+/* Hero section overrides the padding */
 .hero {
+    padding-top: 0;
+    /* No top padding for hero - it needs to be centered */
+    min-height: 100vh;
+    /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Vertically center */
+    align-items: center;
+    /* Horizontally center */
     text-align: center;
-    padding: var(--spacing-md) 0 var(--spacing-lg);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    /* Horizontal padding only */
+}
+
+/* Universal Heading Styles - adjusted for better readability */
+h1 {
+    font-size: 48px;
+    /* Smaller, more readable for sub-pages */
+    font-weight: 500;
+    /* Slightly heavier for better Chinese character rendering */
+    line-height: 1.2;
+    letter-spacing: normal;
+    color: var(--text-color);
+    /* #121317 */
+    margin-bottom: var(--spacing-md);
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 80px;
+    /* Hero uses larger size from antigravity */
+    font-weight: 450;
+    /* Antigravity weight for hero */
     line-height: 1.1;
     margin-bottom: var(--spacing-sm);
-    letter-spacing: -2px;
-    background: linear-gradient(180deg, var(--text-color) 0%, var(--text-secondary) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+}
+
+.devfest-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 24px;
+    /* Adjusted spacing from antigravity */
+    justify-content: center;
+    /* Center the container */
+}
+
+.gdg-logo {
+    height: 24px;
+    /* Much smaller, matching antigravity scale */
+    width: auto;
+}
+
+.devfest-text {
+    font-size: 22px;
+    /* Matching logo size */
+    font-weight: 400;
+    color: var(--text-color);
+    letter-spacing: -0.5px;
 }
 
 .hero p {
-    font-size: 1.3rem;
-    color: var(--text-secondary);
-    max-width: 600px;
-    margin: 0 auto var(--spacing-md);
-    font-weight: 300;
+    font-size: 56px;
+    /* EXACT from antigravity subtitle span */
+    font-weight: 450;
+    /* Matching H1 weight */
+    color: #45474d;
+    /* EXACT from antigravity (lighter gray) */
+    line-height: 1.2;
+    max-width: 1000px;
+    /* Increased width for larger text */
+    margin: 0 auto 40px;
+    /* Space before button */
 }
 
 .cta-button {
     display: inline-block;
-    background-color: var(--text-color);
-    color: var(--bg-color);
-    padding: 1rem 2.5rem;
-    border-radius: 50px;
+    background-color: #121317;
+    /* EXACT from antigravity */
+    color: #ffffff;
+    /* EXACT from antigravity */
+    padding: 10px 24px;
+    /* EXACT from antigravity */
+    height: 47px;
+    /* EXACT from antigravity */
+    border-radius: 9999px;
+    /* Fully rounded from antigravity */
     text-decoration: none;
-    font-weight: 600;
+    font-size: 17.5px;
+    /* EXACT from antigravity */
+    font-weight: 430;
+    /* EXACT from antigravity */
     transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.3s;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cta-button:hover {
@@ -253,7 +349,8 @@ section {
 .card h3 {
     margin-bottom: var(--spacing-sm);
     font-size: 1.4rem;
-    font-weight: 600;
+    font-weight: 400;
+    /* Normal weight */
 }
 
 .card p {
