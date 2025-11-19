@@ -24,42 +24,40 @@
     </nav>
 
     <main>
-        <section>
+        <section class="hero-sub">
             <h1 data-i18n="mcp.title">Chrome DevTools MCP</h1>
         </section>
 
-        <section class="grid">
+        <section class="content-section">
             <div class="card">
-                <h3 data-i18n="mcp.overview">Overview</h3>
-                <p data-i18n="mcp.overview_desc">Chrome DevTools MCP is a Model Context Protocol server that allows AI
-                    agents to interact with Chrome DevTools. It enables agents to inspect, debug, and modify data in the
-                    browser.</p>
+                <h2 data-i18n="mcp.overview">Overview</h2>
+                <p data-i18n="mcp.overview_desc">Chrome DevTools MCP is a Model-Context-Protocol (MCP) server that
+                    allows AI agents to interact with Chrome DevTools. It enables agents to inspect, debug, and modify
+                    data in the browser.</p>
             </div>
-        </section>
 
-        <section>
-            <h2 data-i18n="mcp.features" style="margin-bottom: 1rem;">Key Features</h2>
-            <div class="grid">
-                <div class="card">
-                    <p data-i18n="mcp.feature_1">Performance Insights: Record traces and extract actionable insights.
-                    </p>
-                </div>
-                <div class="card">
-                    <p data-i18n="mcp.feature_2">Browser Debugging: Analyze network requests, screenshots, and console
-                        logs.</p>
-                </div>
-                <div class="card">
-                    <p data-i18n="mcp.feature_3">Reliable Automation: Use Puppeteer to automate actions and wait for
-                        results.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="grid">
             <div class="card">
-                <h3 data-i18n="mcp.tools">Available Tools</h3>
+                <h2 data-i18n="mcp.features">Key Features</h2>
+                <ul class="feature-list">
+                    <li data-i18n="mcp.feature_1">Performance Insights: Record traces and extract actionable insights.
+                    </li>
+                    <li data-i18n="mcp.feature_2">Browser Debugging: Analyze network requests, screenshots, and console
+                        logs.</li>
+                    <li data-i18n="mcp.feature_3">Reliable Automation: Use Puppeteer to automate actions and wait for
+                        results.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2 data-i18n="mcp.tools">Available Tools</h2>
                 <p data-i18n="mcp.tools_desc">The server provides tools for Input Automation (click, type, hover),
                     Navigation (open, close, switch tabs), Emulation (viewport resizing), and Performance Analysis.</p>
+                <ul class="tool-list">
+                    <li data-i18n="mcp.tool_input">Input: click, drag, fill, hover, press_key</li>
+                    <li data-i18n="mcp.tool_nav">Navigation: navigate_page, new_page, wait_for</li>
+                    <li data-i18n="mcp.tool_emulation">Emulation: emulate, resize_page</li>
+                    <li data-i18n="mcp.tool_perf">Performance: analyze_insight, start/stop_trace</li>
+                </ul>
             </div>
         </section>
     </main>
