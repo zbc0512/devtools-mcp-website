@@ -215,8 +215,8 @@ main {
 
 section {
     margin-bottom: var(--spacing-lg);
-    padding-top: 60px;
-    /* Reduced from 80px to further tighten spacing */
+    padding-top: 100px;
+    /* Space for nav on non-hero pages */
     /* Space for nav on non-hero pages */
     opacity: 0;
     transform: translateY(30px);
@@ -532,7 +532,7 @@ footer {
     }
 
     main {
-        padding-top: 60px;
+        padding-top: 100px;
         /* Match section padding */
         padding-left: var(--spacing-sm);
         padding-right: var(--spacing-sm);
