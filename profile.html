@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - DevFest Workshop</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="nav-brand">DevFest Workshop</a>
+        <ul class="nav-links">
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="gdg.html" data-i18n="nav.gdg">GDG & DevFest</a></li>
+            <li><a href="mcp.html" data-i18n="nav.mcp">DevTools MCP</a></li>
+            <li><a href="profile.html" class="active" data-i18n="nav.profile">Profile</a></li>
+        </ul>
+        <div class="nav-controls">
+            <button id="lang-toggle" class="btn-icon">中文</button>
+            <button id="theme-toggle" class="btn-icon">☀️</button>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <h1 data-i18n="profile.title">About Jabez</h1>
+        </section>
+
+        <section class="grid">
+            <div class="card">
+                <h3 data-i18n="profile.role">Java Developer</h3>
+                <p data-i18n="profile.bio">Hi, I'm Jabez. I'm a passionate Java Developer with a deep interest in
+                    building scalable systems. Recently, I've been diving into the world of AI and Agentic workflows.
+                </p>
+            </div>
+            <div class="card">
+                <h3 data-i18n="profile.hobbies">Hobbies & Interests</h3>
+                <ul style="list-style: none; padding-top: 1rem;">
+                    <li data-i18n="profile.hobby_1" style="margin-bottom: 0.5rem;">🎸 Electric Bass Player - I love the
+                        groove!</li>
+                    <li data-i18n="profile.hobby_2" style="margin-bottom: 0.5rem;">🤖 Exploring AI & LLMs</li>
+                    <li data-i18n="profile.hobby_3">💻 Open Source Contributing</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Jabez. Built for DevFest.</p>
+    </footer>
+
+    <script src="assets/script.js"></script>
+</body>
+
+</html>

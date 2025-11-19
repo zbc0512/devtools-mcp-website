@@ -1,72 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title data-i18n="site_title">DevFest Workshop — Chrome DevTools MCP Server</title>
-  <link rel="stylesheet" href="assets/styles.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevFest Workshop - Chrome DevTools MCP</title>
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">DevFest Workshop</a>
-      <nav class="main-nav">
-        <a href="gdg-devfest.html" data-i18n="nav_gdg">GDG & DevFest</a>
-        <a href="devtools-mcp.html" data-i18n="nav_mcp">DevTools MCP</a>
-        <a href="about.html" data-i18n="nav_about">About</a>
-      </nav>
-      <div class="controls">
-        <button id="menu-toggle" aria-label="Toggle menu">☰</button>
-        <select id="lang-select" aria-label="Language">
-          <option value="en">English</option>
-          <option value="zh">中文</option>
-        </select>
-        <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h1 data-i18n="hero_title">Chrome DevTools MCP Workshop</h1>
-        <p class="lead" data-i18n="hero_lead">A hands-on workshop at DevFest focused on the Chrome DevTools MCP Server — exploring how developer tools and model context protocols connect.</p>
-        <p class="meta">Workshop attendee: <strong>Jabez</strong> — Java developer · bass player · AI enthusiast</p>
-        <div class="cta-row">
-          <a class="btn primary" href="devtools-mcp.html" data-i18n="cta_mcp">Learn about DevTools MCP</a>
-          <a class="btn" href="gdg-devfest.html" data-i18n="cta_gdg">About GDG & DevFest</a>
+    <nav>
+        <a href="index.html" class="nav-brand">DevFest Workshop</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active" data-i18n="nav.home">Home</a></li>
+            <li><a href="gdg.html" data-i18n="nav.gdg">GDG & DevFest</a></li>
+            <li><a href="mcp.html" data-i18n="nav.mcp">DevTools MCP</a></li>
+            <li><a href="profile.html" data-i18n="nav.profile">Profile</a></li>
+        </ul>
+        <div class="nav-controls">
+            <button id="lang-toggle" class="btn-icon">中文</button>
+            <button id="theme-toggle" class="btn-icon">☀️</button>
         </div>
-      </div>
-    </section>
+    </nav>
 
-    <section class="content container">
-      <h2 data-i18n="section_sessions">Workshop highlights</h2>
-      <div class="cards">
-        <article class="card">
-          <h3 data-i18n="card_setup_title">Setup & Demo</h3>
-          <p data-i18n="card_setup_desc">Run a local MCP server, connect to DevTools, and try examples that integrate models with browser tooling.</p>
-        </article>
-        <article class="card">
-          <h3 data-i18n="card_arch_title">Architecture</h3>
-          <p data-i18n="card_arch_desc">Understand the protocol, server components, and how DevTools exposes context and actions to external agents.</p>
-        </article>
-        <article class="card">
-          <h3 data-i18n="card_hands_title">Hands-on Labs</h3>
-          <p data-i18n="card_hands_desc">Guided labs where attendees implement small automations and instrumentation using DevTools and MCP primitives.</p>
-        </article>
-      </div>
-    </section>
-  </main>
+    <main>
+        <section class="hero">
+            <h1 data-i18n="home.title">DevFest Workshop</h1>
+            <p data-i18n="home.subtitle">Building the Future with Chrome DevTools MCP</p>
+            <a href="mcp.html" class="cta-button" data-i18n="home.cta">Explore MCP</a>
+        </section>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>© <span id="year">2025</span> Jabez — <a href="mailto:zbc0512@gmail.com">zbc0512@gmail.com</a></div>
-      <div class="small">Built for DevFest • Theme inspired by ai.google.dev</div>
-    </div>
-  </footer>
+        <section class="grid">
+            <div class="card">
+                <h3 data-i18n="home.welcome">Welcome to the Workshop</h3>
+                <p data-i18n="home.description">Join us to explore the power of Chrome DevTools MCP Server. Learn how to
+                    build intelligent agents that can interact with the browser, analyze performance, and automate
+                    tasks.</p>
+            </div>
+        </section>
+    </main>
 
-  <script src="assets/script.js"></script>
+    <footer>
+        <p>&copy; 2025 Jabez. Built for DevFest.</p>
+    </footer>
+
+    <script src="assets/script.js"></script>
 </body>
+
 </html>
