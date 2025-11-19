@@ -126,7 +126,8 @@ nav {
     /* EXACT from antigravity */
     font-weight: 430;
     /* EXACT from antigravity */
-    padding: 6px 16px;
+    padding: 10px 16px;
+    /* Increased vertical padding for taller button */
     /* EXACT from antigravity */
     border-radius: 9999px;
     /* Fully rounded pill shape */
