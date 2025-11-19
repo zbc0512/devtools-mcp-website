@@ -133,14 +133,18 @@ nav {
     transition: color 0.2s, background-color 0.2s;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.nav-links a:hover {
     color: #121317;
     /* Match button text color */
-    background-color: rgba(183, 191, 217, 0.1);
-    /* EXACT from antigravity 'Notify me' button */
-    border: 1px solid rgba(33, 34, 38, 0.06);
-    /* EXACT from antigravity 'Notify me' button */
+    background-color: rgba(183, 191, 217, 0.25);
+    /* Darker opacity (0.1 -> 0.25) */
+    text-decoration: none;
+}
+
+.nav-links a.active {
+    color: #121317;
+    background-color: transparent;
+    /* No background for active state */
     text-decoration: none;
 }
 
@@ -156,11 +160,14 @@ body.dark-mode .nav-links a.active {
 }
 
 /* Dark Mode Nav Hover Override */
-body.dark-mode .nav-links a:hover,
-body.dark-mode .nav-links a.active {
+body.dark-mode .nav-links a:hover {
     color: #ffffff;
-    border-color: rgba(255, 255, 255, 0.15);
-    /* Subtle white border for dark mode */
+    background-color: rgba(255, 255, 255, 0.15);
+    /* Subtle white bg for dark mode */
+}
+
+body.dark-mode .nav-links a.active {
+    color: #e0e0e0;
     background-color: transparent;
 }
 
