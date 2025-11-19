@@ -2,6 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const langToggle = document.getElementById('lang-toggle');
   const themeToggle = document.getElementById('theme-toggle');
 
+  // Force scroll to top on refresh
+  if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+  }
+  window.scrollTo(0, 0);
+
   // Embedded Translations (No fetch needed)
   const translations = {
     "en": {
