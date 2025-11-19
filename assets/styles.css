@@ -541,6 +541,10 @@ footer {
         padding-right: var(--spacing-sm);
     }
 
+    section {
+        padding-top: 100px; /* Override global 210px for mobile */
+    }
+
     .grid {
         grid-template-columns: 1fr;
         gap: 1rem;

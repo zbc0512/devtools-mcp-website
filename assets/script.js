@@ -25,9 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "what_is_devfest": "What is DevFest?",
         "devfest_desc": "DevFest is a global community-led developer conference hosted by Google Developer Groups (GDGs). It is focused on community building and learning about Google's technologies.",
         "values": "Community Values",
-        "values_desc": "We believe in knowledge sharing, inclusivity, and the power of community to drive innovation.",
-        "community_focus": "Community Focus",
-        "community_desc": "GDG is focused on developers and technical content, open to the public, and free or low-cost. It's a place to learn, share, and connect with fellow developers."
+        "values_desc": "We believe in knowledge sharing, inclusivity, and the power of community to drive innovation."
       },
       "mcp": {
         "title": "Chrome DevTools MCP",
@@ -38,11 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "feature_2": "Browser Debugging: Analyze network requests, screenshots, and console logs.",
         "feature_3": "Reliable Automation: Use Puppeteer to automate actions and wait for results.",
         "tools": "Available Tools",
-        "tools_desc": "The server provides tools for Input Automation (click, type, hover), Navigation (open, close, switch tabs), Emulation (viewport resizing), and Performance Analysis.",
-        "tool_input": "Input: click, drag, fill, hover, press_key",
-        "tool_nav": "Navigation: navigate_page, new_page, wait_for",
-        "tool_emulation": "Emulation: emulate, resize_page",
-        "tool_perf": "Performance: analyze_insight, start/stop_trace"
+        "tools_desc": "The server provides tools for Input Automation (click, type, hover), Navigation (open, close, switch tabs), Emulation (viewport resizing), and Performance Analysis."
       },
       "profile": {
         "title": "About Jabez",
@@ -75,9 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "what_is_devfest": "什么是 DevFest？",
         "devfest_desc": "DevFest 是由 Google 开发者社区 (GDG) 举办的全球性社区主导的开发者大会。它专注于社区建设和学习 Google 的技术。",
         "values": "社区价值观",
-        "values_desc": "我们相信知识分享、包容性以及社区推动创新的力量。",
-        "community_focus": "社区关注点",
-        "community_desc": "GDG 专注于开发者和技术内容，向公众开放，并且免费或低成本。这是一个学习、分享和与其他开发者建立联系的地方。"
+        "values_desc": "我们相信知识分享、包容性以及社区推动创新的力量。"
       },
       "mcp": {
         "title": "Chrome DevTools MCP",
@@ -88,11 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "feature_2": "浏览器调试：分析网络请求、截图和控制台日志。",
         "feature_3": "可靠自动化：使用 Puppeteer 自动化操作并等待结果。",
         "tools": "可用工具",
-        "tools_desc": "该服务器提供用于输入自动化（点击、输入、悬停）、导航（打开、关闭、切换标签页）、模拟（视口调整）和性能分析的工具。",
-        "tool_input": "输入：点击、拖拽、填充、悬停、按键",
-        "tool_nav": "导航：页面跳转、新建页面、等待",
-        "tool_emulation": "模拟：模拟设备、调整页面大小",
-        "tool_perf": "性能：分析洞察、开始/停止追踪"
+        "tools_desc": "该服务器提供用于输入自动化（点击、输入、悬停）、导航（打开、关闭、切换标签页）、模拟（视口调整）和性能分析的工具。"
       },
       "profile": {
         "title": "关于 Jabez",
