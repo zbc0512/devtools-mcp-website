@@ -215,8 +215,8 @@ main {
 
 section {
     margin-bottom: var(--spacing-lg);
-    padding-top: 80px;
-    /* Reduced from 100px to tighten spacing */
+    padding-top: 60px;
+    /* Reduced from 80px to further tighten spacing */
     /* Space for nav on non-hero pages */
     opacity: 0;
     transform: translateY(30px);
@@ -258,8 +258,8 @@ h1 {
     letter-spacing: normal;
     color: var(--text-color);
     /* #121317 */
-    margin-bottom: 1rem;
-    /* Reduced from var(--spacing-md) (2rem) to tighten spacing */
+    margin-bottom: 0.5rem;
+    /* Reduced from 1rem to further tighten spacing */
 }
 
 .hero h1 {
@@ -518,9 +518,11 @@ footer {
     }
 
     .hero h1 {
-        font-size: 48px;
-        /* Smaller font for mobile */
+        font-size: 36px;
+        /* Reduced from 48px to prevent wrapping */
         padding: 0 1rem;
+        white-space: nowrap;
+        /* Prevent "DevFest Workshop" from wrapping */
     }
 
     .hero p {
@@ -530,7 +532,7 @@ footer {
     }
 
     main {
-        padding-top: 80px;
+        padding-top: 60px;
         /* Match section padding */
         padding-left: var(--spacing-sm);
         padding-right: var(--spacing-sm);
