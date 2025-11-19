@@ -128,21 +128,20 @@ nav {
     /* EXACT from antigravity */
     padding: 6px 16px;
     /* EXACT from antigravity */
-    border-radius: 20px;
-    /* For smooth hover effect */
+    border-radius: 9999px;
+    /* Fully rounded pill shape */
     transition: color 0.2s, background-color 0.2s;
 }
 
-.nav-links a:hover {
-    color: var(--text-color);
-    background-color: rgba(0, 0, 0, 0.04);
-    /* Very subtle on hover */
+.nav-links a:hover,
+.nav-links a.active {
+    color: #45474d;
+    background-color: #f8f9fc;
+    /* Light gray background on hover matching cards */
+    text-decoration: none;
 }
 
-.nav-links a.active {
-    color: var(--text-color);
-    background-color: transparent;
-}
+
 
 /* Dark mode nav adjustments */
 body.dark-mode .nav-links a {
@@ -179,10 +178,15 @@ body.dark-mode .nav-links a.active {
 /* Layout */
 main {
     min-height: 80vh;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding-left: var(--spacing-md);
-    padding-right: var(--spacing-md);
+    width: 100%;
+    max-width: none;
+    /* Remove max-width to match nav's full width behavior */
+    margin: 0;
+    padding-left: 5rem;
+    /* Match nav left padding */
+    padding-right: 5rem;
+    /* Match nav right padding */
+    box-sizing: border-box;
 }
 
 section {
@@ -214,9 +218,9 @@ section {
     align-items: center;
     /* Horizontally center */
     text-align: center;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    /* Horizontal padding only */
+    padding-left: 0;
+    /* Remove inner padding so it aligns with main's 5rem */
+    padding-right: 0;
 }
 
 /* Universal Heading Styles - adjusted for better readability */
@@ -252,14 +256,14 @@ h1 {
 }
 
 .gdg-logo {
-    height: 24px;
-    /* Much smaller, matching antigravity scale */
+    height: 32px;
+    /* Increased from 24px to be more visible */
     width: auto;
 }
 
 .devfest-text {
-    font-size: 22px;
-    /* Matching logo size */
+    font-size: 28px;
+    /* Increased from 22px */
     font-weight: 400;
     color: var(--text-color);
     letter-spacing: -0.5px;
@@ -316,14 +320,29 @@ h1 {
     gap: var(--spacing-md);
 }
 
+/* Cards */
 .card {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    padding: 2rem;
-    border-radius: 24px;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s;
+    background: #f8f9fc;
+    /* EXACT from antigravity pricing */
+    border: none;
+    /* EXACT from antigravity */
+    border-radius: 36px;
+    /* EXACT from antigravity */
+    padding: 24px;
+    /* EXACT from antigravity */
+    box-shadow: none;
+    /* EXACT from antigravity */
+    transition: transform 0.3s ease;
+    /* Keep subtle transform for interactivity, but remove shadow */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    /* Keep subtle lift */
+    /* No shadow change to match flat aesthetic */
 }
 
 /* Spotlight Effect Logic */
